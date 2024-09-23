@@ -44,3 +44,4 @@ RUN chmod +x /usr/bin/run.sh
 # Docker config
 EXPOSE 3389
 ENTRYPOINT ["/usr/bin/run.sh"]
+CMD ["1", "2", "3"]
