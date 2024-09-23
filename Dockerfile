@@ -37,7 +37,7 @@ RUN apt-get install -y \
     rm -rf /var/cache/apt /var/lib/apt/lists
 
 COPY ./build/kali-run.sh /usr/bin/
-RUN mv /usr/bin/ubuntu-run.sh /usr/bin/run.sh
+RUN mv /usr/bin/kali-run.sh /usr/bin/run.sh
 RUN chmod +x /usr/bin/run.sh
 
 
