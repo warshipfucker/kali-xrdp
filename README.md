@@ -1,6 +1,6 @@
-#Kali Linux XRDP Docker Image
+# Kali Linux XRDP Docker Image
 
-###Overview
+### Overview
 
 This Docker image is based on Kali Linux rolling release, configured to run an XRDP server with the XFCE desktop environment. It allows users to access a full Kali Linux GUI over RDP.
 
@@ -8,13 +8,13 @@ This Docker image is based on Kali Linux rolling release, configured to run an X
 
 To get started with this Docker image, check out the [GitHub Wiki](https://github.com/warshipfucker/kali-xrdp/wiki) for detailed instructions on building, running, and customizing the image.
 
-###Features
+### Features
 
-* XFCE Desktop Environment
+- XFCE Desktop Environment
 
-* XRDP for remote desktop access
+- XRDP for remote desktop access
 
-* Pre-installed tools for a productive environment
+- Pre-installed tools for a productive environment
 
 
 [LICENSE.md](https://github.com/warshipfucker/kali-xrdp/LICENSE.md)
