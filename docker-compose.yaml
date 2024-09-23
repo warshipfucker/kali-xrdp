@@ -1,0 +1,17 @@
+
+services:
+  kali-xrdp:
+    image: ghcr.io/warshipfucker/kali-xrdp:latest
+    container_name: kali-xrdp
+    ports:
+      - "3390:3389"   # XRDP порт
+      - "2222:22"     # SSH порт
+      - "8081:8080"   # Дополнительный сервис
+    volumes:
+      - C:/dev-env/volumes/kali/run:/run
+      - C:/dev-env/volumes/kali/home:/home
+      - C:/dev-env/volumes/kali/mnt:/mnt
+      - C:/dev-env/volumes/kali/opt:/opt
+    stdin_open: true   # Для интерактивного режима
+    tty: true          # Необходим для интерактивного терминала
+    command: ["kali", "kali", "yes"]  # Аргументы для CMD, Username, Password, sudo(yes/no)
