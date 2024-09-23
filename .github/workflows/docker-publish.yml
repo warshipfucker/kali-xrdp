@@ -1,4 +1,4 @@
-name: Docker
+name: kali-xrdp-image-build
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -12,8 +12,15 @@ on:
     branches: [ "main" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
+    paths-ignore:
+      - '**/README.md'
+      - '**/LICENSE'
+    
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - '**/README.md'
+      - '**/LICENSE'
 
 env:
   # Use docker.io for Docker Hub if empty
