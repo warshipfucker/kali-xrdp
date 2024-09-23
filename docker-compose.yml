@@ -1,7 +1,8 @@
+version: '3.8'
 
 services:
   kali-xrdp:
-    image: ghcr.io/warshipfucker/kali-xrdp:latest
+    image: ghcr.io/warshipfucker/kali-xrdp:main
     container_name: kali-xrdp
     ports:
       - "3390:3389"   # XRDP порт
@@ -14,4 +15,9 @@ services:
       - C:/dev-env/volumes/kali/opt:/opt
     stdin_open: true   # Для интерактивного режима
     tty: true          # Необходим для интерактивного терминала
-    command: ["kali", "kali", "yes"]  # Аргументы для CMD, Username, Password, sudo(yes/no)
+
+    deploy:
+      resources:
+        limits:
+          cpus: '3.0'   # Ограничение на использование 3 ядер процессора
+          memory: 6g    # Ограничение на использование 6 ГБ памяти
