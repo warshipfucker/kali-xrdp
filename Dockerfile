@@ -1,9 +1,19 @@
 FROM kalilinux/kali-rolling
+# Отключение интерактивных запросов debconf
+ENV DEBIAN_FRONTEND=noninteractive
 # Установка нужной локали
 RUN apt-get update && apt-get install -y locales \
+    && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && locale-gen en_US.UTF-8 \
-    && update-locale LANG=en_US.UTF-8
-# Install XRDP and other packages
+    && dpkg-reconfigure --frontend=noninteractive locales \
+    && /usr/sbin/update-locale LANG=en_US.UTF-8
+  # Установка переменных окружения
+ENV LANG=en_US.UTF-8 \
+    LANGUAGE=en_US:en \
+    LC_ALL=en_US.UTF-8
+    
+    # Install XRDP and other packages
+    
 RUN apt update && apt install -y xrdp xfce4 xfce4-goodies dbus-x11 x11-xserver-utils
 
 # Set XRDP to use XFCE
