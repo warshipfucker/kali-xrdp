@@ -16,8 +16,6 @@ To get started with this Docker image, check out the [GitHub Wiki](https://githu
 
 - Pre-installed tools for a productive environment
 
+### License
 
-[LICENSE.md](https://github.com/warshipfucker/kali-xrdp/LICENSE.md)
- 
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/warshipfucker/kali-xrdp/LICENSE) file for details.
