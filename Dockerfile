@@ -18,7 +18,7 @@ EXPOSE 3389 22 8080 80 1234
 VOLUME ["/run", "/tmp", "/home", "/mnt", "/opt"]
 
 # Start XRDP service on container startup
-ENTRYPOINT ["sh", "-c", "service xrdp start || rm -f /var/run/xrdp/*.pid && service xrdp restart /bin/bash"]
+ENTRYPOINT ["sh", "-c", "service xrdp restart /bin/bash"]
 
 
 
