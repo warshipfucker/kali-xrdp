@@ -6,6 +6,17 @@ This Docker image is based on Kali Linux rolling release, configured to run an X
 
 ### Quick Start
 
+
+##### Pull image
+```
+docker pull ghcr.io/warshipfucker/kali-xrdp:main
+```
+##### Run container
+```
+docker run -it --name kali-xrdp -v C:\dev-env\volumes\kali/run:/run -v C:\dev-env\volumes\kali/home:/home -v C:\dev-env\volumes\kali/mnt:/mnt  -v C:\dev-env\volumes\kali/opt:/opt -p 3390:3389 -p 2222:22  -p 8081:8080  ghcr.io/warshipfucker/kali-xrdp:main kali kali yes 
+```
+
+
 To get started with this Docker image, check out the [GitHub Wiki](https://github.com/warshipfucker/kali-xrdp/wiki) for detailed instructions on building, running, and customizing the image.
 
 ### Features
