@@ -1,5 +1,8 @@
 FROM kalilinux/kali-rolling
-
+# Установка нужной локали
+RUN apt-get update && apt-get install -y locales \
+    && locale-gen en_US.UTF-8 \
+    && update-locale LANG=en_US.UTF-8
 # Install XRDP and other packages
 RUN apt update && apt install -y xrdp xfce4 xfce4-goodies dbus-x11 x11-xserver-utils
 
