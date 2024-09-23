@@ -1,28 +1,23 @@
-### Pull image
-```
-docker pull ghcr.io/warshipfucker/kali-xrdp:main
-```
-### Run Container
-##### via powershell
-```
-docker run -it --name kali-xrdp \
- -v C:\dev-env\volumes\kali/run:/run
- -v C:\dev-env\volumes\kali/tmp:/tmp \
- -v C:\dev-env\volumes\kali/home:/home \
- -v C:\dev-env\volumes\kali/mnt:/mnt \
- -v C:\dev-env\volumes\kali/opt:/opt \
- -p 3390:3389 \
- -p 22:22 \
- -p 8081:8080 \ 
- -p 80:80 \ 
- -p 1234:1234 \ 
- ghcr.io/warshipfucker/kali-xrdp:main  /bin/bash
-```
-##### via cmd
-```
-docker run -it --name xrdp-kali-continer -v C:\dev-env\volumes\kali/run:/run -v C:\dev-env\volumes\kali/tmp:/tmp -v C:\dev-env\volumes\kali/home:/home -v C:\dev-env\volumes\kali/mnt:/mnt    -v C:\dev-env\volumes\kali/opt:/opt  -p 3390:3389  -p 22:22 -p 8081:8080 -p 80:80 -p 1234:1234 kali-xrdp-vf:latest  /bin/bash
-```
+#Kali Linux XRDP Docker Image
 
-##### Connect from Windows host
-Press Win+R button, in Run window type **"mstsc"**
-Connect to **localhost:3390** using creditionals **kali:kali**
+###Overview
+
+This Docker image is based on Kali Linux rolling release, configured to run an XRDP server with the XFCE desktop environment. It allows users to access a full Kali Linux GUI over RDP.
+
+###Quick Start
+
+To get started with this Docker image, check out the [GitHub Wiki](https://github.com/warshipfucker/kali-xrdp/wiki) for detailed instructions on building, running, and customizing the image.
+
+###Features
+
+* XFCE Desktop Environment
+
+* XRDP for remote desktop access
+
+* Pre-installed tools for a productive environment
+
+
+[LICENSE.md](https://github.com/warshipfucker/kali-xrdp/LICENSE.md)
+ 
+
+This project is licensed under the MIT License. See the LICENSE file for details.
