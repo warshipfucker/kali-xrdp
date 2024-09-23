@@ -22,10 +22,6 @@ On your Windows Host
 3. In Remote Desktop Connection window type **localhost:3390**
 4. Login via creditionals **kali:kali**
 
-### Wiki
-
-To get started with this Docker image, check out the [GitHub Wiki](https://github.com/warshipfucker/kali-xrdp/wiki) for detailed instructions on building, running, and customizing the image.
-
 ### Features
 
 - XFCE Desktop Environment
