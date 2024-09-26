@@ -8,9 +8,6 @@ RUN apt-get update && apt-get install -y locales \
     && dpkg-reconfigure --frontend=noninteractive locales \
     && /usr/sbin/update-locale LANG=en_US.UTF-8
 
-
-
-
 RUN apt-get -y update 
 RUN apt-get -y upgrade
 
