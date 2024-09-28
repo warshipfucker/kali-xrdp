@@ -19,7 +19,9 @@ RUN apt-get install -y \
     xfce4-screenshooter \
     xfce4-taskmanager \
     xfce4-terminal \
-    xfce4-xkb-plugin 
+    xfce4-xkb-plugin  \
+    xfce4- \  
+    kali-desktop-xfce
 
 RUN apt-get install -y \
     dbus-x11 
@@ -28,6 +30,7 @@ RUN apt-get install -y \
     sudo \
     wget \
     xorgxrdp \
+    kali-win-kex \
     xrdp && \
     apt remove -y light-locker xscreensaver && \
     apt autoremove -y && \
